@@ -3,7 +3,7 @@ package com.bits.mtech.ss.dbms.vfs;
 public class VfsException  extends RuntimeException{
 
 	/**
-	 * 
+	 * Sample
 	 */
 	private static final long serialVersionUID = 1L;
 
