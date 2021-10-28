@@ -6,5 +6,9 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+	/**
+	 * this file is updated by yogesh
+	 */
 	private @Id @GeneratedValue Long id;
+	
 }
