@@ -26,6 +26,7 @@ public class Vehicle {
 		this.chasisNumber = chasisNumber;
 		this.registrationNumber = registrationNumber;
 		this.registrationStartDate = registrationStartDate;
+//vehicleclass
 	}
 
 	
