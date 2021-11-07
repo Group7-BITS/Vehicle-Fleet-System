@@ -1,7 +1,5 @@
 package com.bits.mtech.ss.dbms.vfs.entity;
 
-import java.sql.NClob;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
