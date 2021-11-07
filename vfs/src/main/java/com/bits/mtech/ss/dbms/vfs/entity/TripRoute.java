@@ -1,6 +1,4 @@
 package com.bits.mtech.ss.dbms.vfs.entity;
-import java.sql.NClob;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +10,7 @@ import javax.persistence.Table;
 public class TripRoute {
 	private @Id @GeneratedValue Long id;
 	@Column(name = "GPS")
-	private NClob gps;
+	private String gps;
 	
 	public Long getId() {
 		return id;
@@ -20,10 +18,10 @@ public class TripRoute {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public NClob gps() {
+	public String gps() {
 		return gps;
 	}
-	public void gps(NClob gps) {
+	public void gps(String gps) {
 		this.gps = gps;
 	}
 	
@@ -31,7 +29,7 @@ public class TripRoute {
 		super();
 	}
 	
-	public TripRoute(NClob gps) {
+	public TripRoute(String gps) {
 		super();
 		this.gps=gps;
 	}	

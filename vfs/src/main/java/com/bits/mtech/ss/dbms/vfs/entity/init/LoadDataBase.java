@@ -9,13 +9,27 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.bits.mtech.ss.dbms.vfs.entity.Vehicle;
+import com.bits.mtech.ss.dbms.vfs.entity.VehicleInsurance;
 import com.bits.mtech.ss.dbms.vfs.entity.repository.VehicleRepository;
 import com.bits.mtech.ss.dbms.vfs.entity.Address;
+import com.bits.mtech.ss.dbms.vfs.entity.Booking;
+import com.bits.mtech.ss.dbms.vfs.entity.Driver;
+import com.bits.mtech.ss.dbms.vfs.entity.LicenseTypeVehicleType;
+import com.bits.mtech.ss.dbms.vfs.entity.Trip;
+import com.bits.mtech.ss.dbms.vfs.entity.TripRoute;
 import com.bits.mtech.ss.dbms.vfs.entity.User;
+import com.bits.mtech.ss.dbms.vfs.entity.UserCredential;
 import com.bits.mtech.ss.dbms.vfs.entity.repository.AddressRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.BookingRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.DriverRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.LicenseTypeVehicleTypeRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.TripRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.TripRouteRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.UserCredentialRepository;
 import com.bits.mtech.ss.dbms.vfs.entity.repository.UserRepository;
 import com.bits.mtech.ss.dbms.vfs.entity.UserRole;
 import com.bits.mtech.ss.dbms.vfs.entity.repository.UserRoleRepository;
+import com.bits.mtech.ss.dbms.vfs.entity.repository.VehicleInsuranceRepository;
 
 @Configuration
 class LoadDatabase {
@@ -24,7 +38,10 @@ class LoadDatabase {
 
   @Bean
   CommandLineRunner initDatabase(VehicleRepository vehicleRepository,UserRepository userRepository, UserRoleRepository userRoleRepository,
-		  AddressRepository addressRepository) {
+		  AddressRepository addressRepository, BookingRepository bookingRepository, DriverRepository driverRepository,
+		  LicenseTypeVehicleTypeRepository licenseTypeVehicletypeRepository, TripRepository tripRepository, 
+		  TripRouteRepository tripRouteRepository, UserCredentialRepository userCredentialRepository,
+		  VehicleInsuranceRepository vehicleInsuranceRepository) {
 
     return args -> {
       log.info("Preloading {}", vehicleRepository.save(new Vehicle("CH-0567899", "RG-UP074567", new Date())));
@@ -34,7 +51,13 @@ class LoadDatabase {
       log.info("Preloading {}", userRoleRepository.save(new UserRole("Customer")));
       log.info("Preloading {}" ,userRoleRepository.save(new UserRole("Vendor")));
       log.info("Preloading {}" ,addressRepository.save(new Address("41°24’12.2″N   2°10’26.5″E", "La Sagrada Familia, C. Mallorca, 401", "#415", "Barcelona", "08013", "SPAIN", "Opposit to Cake Shop")));
-      
+      log.info("Preloading {}" ,bookingRepository.save(new Booking("SPAIN", "AUSTRIA", new Date(1636310839), "customer-145", "driver-444", "TBVGU", "PENDING")));
+      log.info("Preloading {}" ,driverRepository.save(new Driver(new Date(1636310839), new Date(1736310899), "INTERSTATE")));
+      log.info("Preloading {}" ,licenseTypeVehicletypeRepository.save(new LicenseTypeVehicleType("COUNTRY", "4-WHEEL")));
+      log.info("Preloading {}" ,tripRepository.save(new Trip(new Date(1636311082), new Date(1646311082), 18299.00, "It is a smooth experience", "36/2, 8th Cross Rd, R K Colony, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078", "Outer Ring Road Manyata - Embassy Business Park, Block E, Bengaluru, Karnataka 560045")));
+      log.info("Preloading {}" ,tripRouteRepository.save(new TripRoute("41°24’12.2″N   2°10’26.5″E")));
+      log.info("Preloading {}" ,userCredentialRepository.save(new UserCredential("iweuryiweurihei9738473dsd", "key")));
+      log.info("Preloading {}" ,vehicleInsuranceRepository.save(new VehicleInsurance(new Date(1636311082), new Date(1646311082))));
     };
     
   }

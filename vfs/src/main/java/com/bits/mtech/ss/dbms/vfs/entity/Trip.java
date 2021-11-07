@@ -1,5 +1,4 @@
 package com.bits.mtech.ss.dbms.vfs.entity;
-import java.sql.NClob;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -23,7 +22,7 @@ public class Trip {
 	private double tripCost;
 	
 	@Column(name = "TRIP_REVIEW")
-	private NClob tripReview;
+	private String tripReview;
 	
 	@Column(name = "SOURCE_ADDRESS")
 	private String sourceAddress;
@@ -63,11 +62,11 @@ public class Trip {
 		this.tripCost = tripCost;
 	}
 
-	public NClob getTripReview() {
+	public String getTripReview() {
 		return tripReview;
 	}
 
-	public void setTripReview(NClob tripReview) {
+	public void setTripReview(String tripReview) {
 		this.tripReview = tripReview;
 	}
 
@@ -91,7 +90,7 @@ public class Trip {
 		super();
 	}
 	
-	public Trip(Date tripStartDate, Date tripEndDate, double tripCost, NClob tripReview, 
+	public Trip(Date tripStartDate, Date tripEndDate, double tripCost, String tripReview, 
 			String sourceAddress, String destinationAddress) {
 		super();
 		this.tripStartDate = tripStartDate;
