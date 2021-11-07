@@ -37,8 +37,11 @@ public class Address {
 	@Column(name = "LANDMARK")
 	private String landMark;
 
-
-	public Address(NClob geoLocationCordinates, String street, String flatNumber,
+	public Address() {
+		super();
+	}
+	
+	public Address(Long id, NClob geoLocationCordinates, String street, String flatNumber,
 			String city, String pinCode, String country, String landMark) {
 		super();
 		this.geoLocationCordinates = geoLocationCordinates;

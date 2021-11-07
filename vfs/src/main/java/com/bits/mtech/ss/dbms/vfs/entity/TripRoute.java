@@ -26,11 +26,13 @@ public class TripRoute {
 	public void gps(NClob gps) {
 		this.gps = gps;
 	}
-	public TripRoute(Long id, NClob gps) {
+	
+	public TripRoute() {
 		super();
-		this.id=id;
+	}
+	
+	public TripRoute(NClob gps) {
+		super();
 		this.gps=gps;
-		
-		
 	}	
 }
