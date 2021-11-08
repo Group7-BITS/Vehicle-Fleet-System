@@ -1,5 +1,4 @@
 package com.bits.mtech.ss.dbms.vfs.entity;
-import java.sql.NClob;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -23,16 +22,16 @@ public class VehicleServices {
 	private Date serviceDate;
 
 	@Column(name = "SER_LOC")
-	private NClob serviceLocation;
+	private String serviceLocation;
 
 	@Column(name = "SER_RECOMMEND")
-	private NClob serviceRecommend;
+	private String serviceRecommend;
 	
 	@Column(name = "SER_ISSUE")
-	private NClob serviceIssue;
+	private String serviceIssue;
 	
 
-	public VehicleServices(String vehicleId, Date serviceDate, NClob serviceLocation, NClob serviceRecommend, NClob serviceIssue) {
+	public VehicleServices(String vehicleId, Date serviceDate, String serviceLocation, String serviceRecommend, String serviceIssue) {
 		super();
 		this.vehicleId = vehicleId;
 		this.serviceDate = serviceDate;
@@ -73,27 +72,27 @@ public class VehicleServices {
 		this.serviceDate = serviceDate;
 	}
 
-	public NClob  getServiceLocation() {
+	public String  getServiceLocation() {
 		return serviceLocation;
 	}
 
-	public void setServiceLocation(NClob serviceLocation) {
+	public void setServiceLocation(String serviceLocation) {
 		this.serviceLocation = serviceLocation;
 	}
 
-	public NClob getServiceRecommend() {
+	public String getServiceRecommend() {
 		return serviceRecommend;
 	}
 
-	public void setServiceRecommend(NClob serviceRecommend) {
+	public void setServiceRecommend(String serviceRecommend) {
 		this.serviceRecommend = serviceRecommend;
 	}
 	
-	public NClob getServiceIssue() {
+	public String getServiceIssue() {
 		return serviceIssue;
 	}
 
-	public void setServiceIssue(NClob serviceIssue) {
+	public void setServiceIssue(String serviceIssue) {
 		this.serviceIssue = serviceIssue;
 	}
 }
