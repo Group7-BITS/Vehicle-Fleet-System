@@ -1,7 +1,5 @@
 package com.bits.mtech.ss.dbms.vfs.entity;
 
-import java.sql.NClob;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +15,7 @@ import javax.persistence.Table;
 public class Address {
 	private @Id @GeneratedValue Long id;
 	@Column(name = "GEO_LOCATION_CORDINATES")
-	private NClob geoLocationCordinates;
+	private String geoLocationCordinates;
 
 	@Column(name = "STREET")
 	private String street;
@@ -37,8 +35,11 @@ public class Address {
 	@Column(name = "LANDMARK")
 	private String landMark;
 
-
-	public Address(NClob geoLocationCordinates, String street, String flatNumber,
+	public Address() {
+		super();
+	}
+	
+	public Address(String geoLocationCordinates, String street, String flatNumber,
 			String city, String pinCode, String country, String landMark) {
 		super();
 		this.geoLocationCordinates = geoLocationCordinates;
@@ -62,13 +63,13 @@ public class Address {
 
 
 
-	public NClob getGeoLocationCordinates() {
+	public String getGeoLocationCordinates() {
 		return geoLocationCordinates;
 	}
 
 
 
-	public void setGeoLocationCordinates(NClob geoLocationCordinates) {
+	public void setGeoLocationCordinates(String geoLocationCordinates) {
 		this.geoLocationCordinates = geoLocationCordinates;
 	}
 

@@ -26,6 +26,10 @@ public class Driver {
 	private String licenseType;
 	
 	
+	public Driver() {
+		super();
+	}
+	
 	public Driver(Date driverlicense, Date licenseExpiry, String licenseType) {
 		super();
 		this.driverlicense = driverlicense;
