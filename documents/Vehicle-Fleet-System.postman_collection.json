@@ -1,0 +1,2473 @@
+{
+	"info": {
+		"_postman_id": "8f6c450c-2c09-4d43-8307-7550e396e9fb",
+		"name": "Vehicle-Fleet-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "GET All Address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Address by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Address by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "GET All Booking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Booking by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/booking/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Booking",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/booking/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Booking by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/booking/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "GET All Driver",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Driver by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Driver",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Driver by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LicenseTypeVehicleType",
+			"item": [
+				{
+					"name": "GET All LicenseTypeVehicleType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET LicenseTypeVehicleType by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE LicenseTypeVehicleType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Driver",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Driver by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "GET All Trip",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Trip by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Trip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Trip by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TripRoute",
+			"item": [
+				{
+					"name": "GET All TripRoute",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET TripRoute by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tripRoute/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tripRoute",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE TripRoute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tripRoute",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tripRoute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE TripRoute",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tripRoute/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tripRoute",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE TripRoute by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tripRoute/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tripRoute",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserCredential",
+			"item": [
+				{
+					"name": "GET All UserCredential",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET UserCredential by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userCredential/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userCredential",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE UserCredential",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userCredential",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userCredential"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE UserCredential",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userCredential/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userCredential",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE UserCredential by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userCredential/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userCredential",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "GET All Vehicles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Vehicle by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Vehicle by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GET All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Role",
+			"item": [
+				{
+					"name": "GET All UserRoles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userRoles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userRoles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET UserRole by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userRoles/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userRoles",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE UserRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userRoles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userRoles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE UserRole",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userRoles/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userRoles",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE UserRole by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userRoles/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userRoles",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleInsurance",
+			"item": [
+				{
+					"name": "GET All VehicleInsurance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleInsurance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleInsurance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleInsurance by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleInsurance/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleInsurance",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleInsurance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleInsurance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleInsurance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleInsurance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleInsurance/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleInsurance",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleInsurance by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleInsurance/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleInsurance",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleLocation",
+			"item": [
+				{
+					"name": "GET All VehicleLocations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleLocations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleLocations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleLocation by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleLocations/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleLocations",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleLocations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleLocations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleLocation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleLocations/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleLocations",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleLocation by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleLocations/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleLocations",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleProblemType",
+			"item": [
+				{
+					"name": "GET All VehicleProblemTypes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleProblemTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleProblemTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleProblemType by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleProblemTypes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleProblemTypes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleProblemType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleProblemTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleProblemTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleProblemType",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleProblemTypes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleProblemTypes",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleProblemType by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleProblemTypes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleProblemTypes",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleServices",
+			"item": [
+				{
+					"name": "GET All VehicleServices",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleServices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleServices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleService by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleServices/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleServices",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleService",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleServices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleServices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleService",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleServices/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleServices",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleService by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleServices/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleServices",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleType",
+			"item": [
+				{
+					"name": "GET All VehicleTypes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleType by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleTypes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleTypes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleType",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleTypes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleTypes",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleType by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleTypes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleTypes",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleVendor",
+			"item": [
+				{
+					"name": "GET All VehicleVendors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleVendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleVendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VehicleVendor by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"firstName\": \"yogesh\",\n        \"lastName\": \"s\",\n        \"email\": \"yk@gmail.com\",\n        \"phoneNumber\": \"7566004312\",\n        \"role\": \"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleVendors/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleVendors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE VehicleVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08013\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposit to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleVendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleVendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VehicleVendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"geoLocationCordinates\": \"41°24’14.2″N   2°10’29.5″E\",\n    \"street\": \"Familia, C. Mallorca, 401\",\n    \"flatNumber\": \"#415\",\n    \"city\": \"Barcelona\",\n    \"pinCode\": \"08017\",\n    \"country\": \"SPAIN\",\n    \"landMark\": \"Opposite to Super Market\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleVendors/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleVendors",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VehicleVendor by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicleVendors/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicleVendors",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
